@@ -5,19 +5,21 @@
     <h1>hello vue3</h1>
     <!-- 使用组件 -->
     <Person></Person>
+    <User></User>
   </div>
 </template>
 <!-- 编写ts脚本 -->
-<script lang="ts">
+<script lang="ts" name="AppRoot" setup>
   //导入person组件
   import Person from "./components/Person.vue";
+  import User from "./components/User.vue";
 
-  //默认导出
-  export default {
-    name: "app",
-    //组件注册
-    components: { Person },
-  };
+  // //默认导出
+  // export default {
+  //   name: "app",
+  //   //组件注册
+  //   components: { Person },
+  // };
 </script>
 <!-- 编写样式 -->
 <style scoped>
