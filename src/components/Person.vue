@@ -1,6 +1,7 @@
 <!-- 子组件 -->
 <template>
   <div class="person">
+    <h3>Person 子组件</h3>
     <h3>姓名：{{ username }}</h3>
     <!-- 绑定事件语法@， v-on -->
     <button @click="showPhone">显示联系方式</button>
@@ -20,11 +21,15 @@
       function showPhone() {
         alert(phone);
       }
-
+      //可以返回函数
       return {
         username,
         showPhone,
       };
+      // //渲染函数，会覆盖template
+      // return function () {
+      //   return "渲染函数";
+      // };
     },
   };
 </script>
